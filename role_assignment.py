@@ -31,6 +31,7 @@ async def on_message(message):
         role = message.guild.get_role(int(role_ID))
         #print(role)
         await message.author.add_roles(role)
+        await message.add_reaction("🎉")
         print(f'ロール：{role.name} をユーザー：{message.author} に付与しました。')
 
 client.run(TOKEN)  
